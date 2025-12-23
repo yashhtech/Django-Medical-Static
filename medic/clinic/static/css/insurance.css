@@ -1,0 +1,93 @@
+/* ===== HEADER ===== */
+.ins-hero {
+    height: 280px;
+    background: 
+        linear-gradient(
+            rgba(120, 200, 170, 0.85),
+            rgba(120, 200, 170, 0.85)
+        ),
+        url("../images/ins.jpg"); /* ADD IMAGE */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.ins-hero-overlay {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 60px;
+}
+
+.ins-hero h1 {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* ===== SECTION ===== */
+.insurance-section {
+    text-align: center;
+    padding: 80px 60px;
+}
+
+.insurance-section h2 {
+    color: #2bb673;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+/* ===== LOGOS ===== */
+.insurance-logos {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.insurance-card {
+    width: 180px;
+    text-align: center;
+}
+
+.insurance-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.insurance-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ===== NOTE ===== */
+.insurance-note {
+    font-size: 15px;
+    color: #666;
+}
+
+.insurance-note a {
+    color: #2bb673;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.insurance-note a:hover {
+    text-decoration: underline;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {         
+    .insurance-logos {
+        gap: 30px;
+    }
+}       
+@media (max-width: 480px) {         
+    .insurance-card {
+        width: 140px;
+    }
+}

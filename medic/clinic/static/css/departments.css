@@ -1,0 +1,75 @@
+/* ===== PAGE HEADER ===== */
+/* PAGE HEADER */
+.depart-hero {
+    height: 280px;
+    background: 
+        linear-gradient(
+            rgba(120, 200, 170, 0.85),
+            rgba(120, 200, 170, 0.85)
+        ),
+        url("../images/card.jpg"); /* ADD IMAGE */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.depart-hero-overlay {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 60px;
+}
+
+.depart-hero h1 {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+/* ===== DEPARTMENTS SECTION ===== */
+.departments {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 70px 60px;
+    background: #ffffff;
+}
+
+.dept-card {
+    width: 320px;
+}
+
+.dept-card img {
+    width: 100%;
+    height: auto;
+}
+
+.dept-card h3 {
+    color: #2bb673;
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.dept-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 10px 0 15px;
+}
+
+.dept-card a {
+    color: #8e44ad;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dept-card a:hover {
+    text-decoration: underline;
+}
+/* RESPONSIVE */
+@media (max-width: 992px) { 
+    .departments {
+        flex-direction: column;
+        align-items: center;
+    }
+}       

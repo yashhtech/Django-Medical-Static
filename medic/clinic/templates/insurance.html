@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/insurance.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="ins-hero">
+    <div class="ins-hero-overlay">
+        <h1>Insurance Plans</h1>
+    </div>
+</section>
+
+<!-- ===== INSURANCE CONTENT ===== -->
+<section class="insurance-section">
+
+    <h2>Health plans which we accept:</h2>
+
+    <div class="insurance-logos">
+
+        <div class="insurance-card">
+            <img src="{% static 'images/clini.png' %}" alt="Clinimed">
+            <h3>CliniMed</h3>
+            <p><b>Complete medical insurance with nationwide hospital coverage.</b></p>
+        </div>
+
+        
+        <div class="insurance-card">
+            <img src="{% static 'images/life.png' %}" alt="LifePlan">
+            <h3>LifePlan</h3>
+            <p><b>Family-focused healthcare coverage with flexible benefits.</b></p>
+        </div>
+
+        <div class="insurance-card">
+            <img src="{% static 'images/us.png' %}" alt="US Health">
+            <h3>US Health</h3>
+            <p><b>Premium health insurance with advanced treatment support.</b></p>
+        </div>
+
+        <div class="insurance-card">
+            <img src="{% static 'images/lic.png' %}" alt="LIC">
+            <h3>LIC</h3>
+            <p><b>Trusted healthcare network covering multiple providers.</b></p>
+        </div>
+
+        <div class="insurance-card">
+            <img src="{% static 'images/one.png' %}" alt="OnePlan">
+            <h3>OnePlan</h3>
+            <p><b>Affordable health plans with wide specialist access.</b></p>
+        </div>
+
+
+    </div>
+
+    <p class="insurance-note">
+        <b>Not covered by any of these plans?</b>
+        <a href="{% url 'contact' %}"><b>Contact us</b></a> <b>and we will find the best solution to suit you.</b>
+    </p>
+
+</section>
+
+{% endblock %}

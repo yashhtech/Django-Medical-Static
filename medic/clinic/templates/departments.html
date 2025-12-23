@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/departments.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="depart-hero">
+    <div class="depart-hero-overlay">
+        <h1>Departments</h1>
+    </div>
+</section>
+
+
+
+<section class="departments">
+    <div class="dept-card">
+        <img src="{% static 'images/card.jpg' %}">
+        <h3>Cardiology</h3>
+        <p>
+            I'm a paragraph. Click here to add your own text and edit me.
+            Let your users get to know you.
+        </p>
+        <a href="#">> Read More</a>
+    </div>
+
+    <div class="dept-card">
+        <img src="{% static 'images/neuro.jpg' %}">
+        <h3>Neurology</h3>
+        <p>
+            I'm a paragraph. Click here to add your own text and edit me.
+            Let your users get to know you.
+        </p>
+        <a href="#">> Read More</a>
+    </div>
+
+    <div class="dept-card">
+        <img src="{% static 'images/ortho.jpg' %}">
+        <h3>Orthopedics</h3>
+        <p>
+            I'm a paragraph. Click here to add your own text and edit me.
+            Let your users get to know you.
+        </p>
+        <a href="#">> Read More</a>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | Medical Clinic{% endblock %}
+
+{% block content %}
+
+<!-- ================= HERO ================= -->
+<section class="hero-slider">
+    <div class="slides">
+
+        <div class="slide"
+             style="background-image: url('{% static 'images/mc1.jpg' %}')">
+        </div>
+
+        <div class="slide"
+             style="background-image: url('{% static 'images/mc2.jpg' %}')">
+        </div>
+
+        <div class="slide"
+             style="background-image: url('{% static 'images/mc3.jpg' %}')">
+        </div>
+
+    </div>
+
+
+    <!-- overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- cards -->
+<div class="department-wrapper">
+    <div class="department-cards">
+
+        <div class="dept-card light">
+            <h3>Cardiology</h3>
+            <p>
+                I'm a paragraph. Click here to add your own text and edit me.
+            </p>
+            <a href="#" class="read-btn">Read More</a>
+        </div>
+
+        <div class="dept-card mid">
+            <h3>Neurology</h3>
+            <p>
+                I'm a paragraph. Click here to add your own text and edit me.
+            </p>
+            <a href="#" class="read-btn">Read More</a>
+        </div>
+
+        <div class="dept-card dark">
+            <h3>Orthopaedics</h3>
+            <p>
+                I'm a paragraph. Click here to add your own text and edit me.
+            </p>
+            <a href="#" class="read-btn">Read More</a>
+        </div>
+
+    </div>
+</div>
+
+
+    <button class="chat-btn">Let's Chat!</button>
+    <button class="book-btn">Book Now</button>
+</section>
+
+<!-- ================= APPOINTMENT STRIP ================= -->
+<section class="appointment-section">
+    <div class="appointment-container">
+
+        <div class="appointment-text">
+            <h2>Schedule Your Appointment</h2>
+            <p>
+                Taking care of your health is important. Book an appointment with our
+                experienced medical professionals today.
+            </p>
+        </div>
+
+        <div class="appointment-action">
+            <a href="#" class="appointment-btn">Book an Appointment</a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+<section class="features">
+    <h2>Taking care of your health</h2>
+
+    <div class="feature-slider">
+        <div class="feature-track">
+
+            <!-- Feature 1 -->
+            <div class="feature">
+                <div class="icon">💬</div>
+                <h3>Health Plans We Accept</h3>
+                <p>I'm a paragraph. Click here to add your own text.</p>
+                <a href="#" class="feature-btn">Read More</a>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature">
+                <div class="icon">👤</div>
+                <h3>No.1 Medical Clinic</h3>
+                <p>Trusted healthcare with experienced professionals.</p>
+                <a href="#" class="feature-btn">Read More</a>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature">
+                <div class="icon">📞</div>
+                <h3>Specialist Doctors</h3>
+                <p>Qualified specialists available for all departments.</p>
+                <a href="#" class="feature-btn">Read More</a>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature">
+                <div class="icon">🏥</div>
+                <h3>Modern Facilities</h3>
+                <p>Advanced equipment & modern infrastructure.</p>
+                <a href="#" class="feature-btn">Read More</a>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature">
+                <div class="icon">🕒</div>
+                <h3>24/7 Emergency</h3>
+                <p>Emergency services available round the clock.</p>
+                <a href="#" class="feature-btn">Read More</a>
+            </div>
+
+            <!-- DUPLICATE SAME FEATURES (IMPORTANT FOR LOOP) -->
+            <!-- copy same 5 again -->
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+<section class="newsletter">
+    <div class="newsletter-container">
+
+        <div class="newsletter-text">
+            <h2>Sign Up for Our Newsletter</h2>
+            <p>
+                Stay informed about health tips, clinic updates, and
+                important medical announcements.
+            </p>
+        </div>
+
+        <form class="newsletter-form" method="post">
+            {% csrf_token %}
+            <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+            >
+            <button type="submit">Subscribe</button>
+        </form>
+
+    </div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Medical Clinic{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="logo">
+    <div class="logo-title">
+        <span class="pulse">~</span>
+        <span class="medical">Medical</span>
+        <span class="clinic">Clinic</span>
+    </div>
+    <div class="logo-subtitle">Exams & Diagnostics</div>
+</div>
+
+
+<nav class="main-nav">
+    <a href="{% url 'home' %}" class="nav-link"><b>Home</b></a>
+    <a href="{% url 'about' %}" class="nav-link"><b>About Us</b></a>
+    <a href="{% url 'departments' %}" class="nav-link"><b>Departments</b></a>
+    <a href="{% url 'insurance' %}" class="nav-link"><b>Insurance</b></a>
+    <a href="{% url 'contact' %}" class="nav-link"><b>Contact</b></a>
+
+    <!-- LOGIN -->
+    <a href="#" class="login-btn">
+        <span class="login-icon">👤</span>
+        <span>Log In</span>
+    </a>
+</nav>
+
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+{% block content %}{% endblock %}
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-left">
+            <p>© 2035 by Medical Clinic. Powered and secured by Wix</p>
+        </div>
+
+        <div class="footer-center">
+            <p>📍 500 Terry Francine St, San Francisco, CA 94158</p>
+            <p>📞 Tel: 123-456-7890</p>
+        </div>
+
+        <div class="footer-right">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+    </div>
+</footer>
+
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+{% block body_class %}about-page{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="about-hero">
+    <h1>About Us</h1>
+</section>
+
+<!-- ABOUT CLINIC -->
+<section class="about-clinic container">
+    <div class="about-left">
+        <img src="{% static 'images/a1.jpg' %}" alt="Clinic">
+    </div>
+    <div class="about-right">
+        <h2>About the Medical Clinic</h2>
+        <p>
+            I'm a paragraph. Click here to add your own text and edit me.
+            It's easy. Just click “Edit Text” or double click me.
+        </p>
+        <p>
+            This is a great space to write long text about your company
+            and your services.
+        </p>
+    </div>
+</section>
+
+<section class="doctors">
+    <h2>Providing you with the best doctors for the best care</h2>
+
+    <div class="doctor-slider">
+        <div class="doctor-track">
+            <div class="doctor-card">
+                <img src="{% static 'images/d1.jpg' %}" alt="Dr. Andrew Khan">
+                <h3>Dr. Andrew Khan</h3>
+                <p>I'm a paragraph. Click here to add your own text.</p>
+            </div>
+
+            <div class="doctor-card">
+                <img src="{% static 'images/d2.jpg' %}" alt="Dr. Amelia Write">
+                <h3>Dr. Amelia Write</h3>
+                <p>I'm a paragraph. Click here to add your own text.</p>
+            </div>
+
+            <div class="doctor-card">
+                <img src="{% static 'images/d3.jpg' %}" alt="Dr. Anthony Robins">
+                <h3>Dr. Anthony Robins</h3>
+                <p>I'm a paragraph. Click here to add your own text.</p>
+            </div>
+             <div class="doctor-card">
+                <img src="{% static 'images/d4.jpg' %}" alt="Dr. Anthony Robins">
+                <h3>Dr. Anthony Robins</h3>
+                <p>I'm a paragraph. Click here to add your own text.</p>
+            </div>
+             <div class="doctor-card">
+                <img src="{% static 'images/d5.jpg' %}" alt="Dr. Anthony Robins">
+                <h3>Dr. Anthony Robins</h3>
+                <p>I'm a paragraph. Click here to add your own text.</p>
+            </div>
+
+            <!-- DUPLICATE cards for smooth infinite loop -->
+            <div class="doctor-card">
+                <img src="{% static 'images/d1.jpg' %}">
+                <h3>Dr. Andrew Khan</h3>
+            </div>
+
+            <div class="doctor-card">
+                <img src="{% static 'images/d2.jpg' %}">
+                <h3>Dr. Amelia Write</h3>
+            </div>
+
+            <div class="doctor-card">
+                <img src="{% static 'images/d3.jpg' %}">
+                <h3>Dr. Anthony Robins</h3>
+            </div>
+             <div class="doctor-card">
+                <img src="{% static 'images/d4.jpg' %}" alt="Dr. Anthony Robins">
+                <h3>Dr. Anthony Robins</h3>
+                <p>I'm a paragraph. Click here to add your own text.</p>
+            </div>
+             <div class="doctor-card">
+                <img src="{% static 'images/d5.jpg' %}" alt="Dr. Anthony Robins">
+                <h3>Dr. Anthony Robins</h3>
+                <p>I'm a paragraph. Click here to add your own text.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

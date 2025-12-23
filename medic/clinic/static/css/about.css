@@ -1,0 +1,119 @@
+/* HERO */
+.about-hero {
+    height: 220px;
+    background:
+        linear-gradient(rgba(0,180,120,.8), rgba(0,180,120,.8)),
+        url("../images/mc3.jpg") center/cover;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.about-hero h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+/* ABOUT CLINIC */
+.about-clinic {
+    display: flex;
+    gap: 60px;
+    padding: 80px 0;
+    align-items: center;
+}
+
+.about-left img {
+    width: 480px;
+}
+
+.about-right h2 {
+    color: #00a86b;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.about-right p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* DOCTORS */
+.doctors {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.doctors h2 {
+    color: #00a86b;
+    font-size: 34px;
+    margin-bottom: 60px;
+}
+
+
+
+.doctor-card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.doctor-card h3 {
+    color: #00a86b;
+    margin: 15px 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.doctor-card p {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* SLIDER CONTAINER */
+.doctor-slider {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* MOVING TRACK */
+.doctor-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scrollDoctors 20s linear infinite;
+}
+
+/* CARD DESIGN */
+.doctor-card {
+    min-width: 280px;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.doctor-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* CONTINUOUS ANIMATION */
+@keyframes scrollDoctors {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* PAUSE ON HOVER (optional)
+.doctor-slider:hover .doctor-track {
+    animation-play-state: paused;
+} */
+

@@ -1,0 +1,703 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* ================= CURVED GRADIENT NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 70px;
+
+    /* soft white → green mix */
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f4fbf7 45%,
+        #e7f6ee 100%
+    );
+
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* NAV LINKS */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+/* NAV LINKS SLIGHT ROUND FEEL */
+
+.nav-link {
+    position: relative;
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding: 6px 4px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #27ae60;
+}
+
+
+/* UNDERLINE ANIMATION */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #27ae60;
+    transition: width 0.3s ease;
+}
+
+
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ACTIVE LINK */
+.nav-link.active {
+    color: #27ae60;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.logo-title .pulse {
+    color: #9b59b6;
+    font-size: 32px;
+    margin-right: 6px;
+    font-weight: 400;
+}
+
+.logo-title .medical {
+    color: #9b59b6;
+    font-weight: 300;
+    margin-right: 4px;
+}
+
+.logo-title .clinic {
+    color: #27ae60;
+    font-weight: 400;
+}
+
+/* SUBTITLE */
+.logo-subtitle {
+    font-size: 13px;
+    color: #9aa0a6;
+    letter-spacing: 1px;
+    margin-left: 28px; /* aligns under text, not pulse */
+    margin-top: 4px;
+}
+
+/* ================= LOGIN BUTTON ================= */
+
+/* LOGIN BUTTON SOFT & CURVED */
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 22px;
+    border-radius: 999px;
+
+    background: linear-gradient(
+        135deg,
+        #9b59b6,
+        #27ae60
+    );
+
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(39,174,96,0.35);
+}
+
+
+.login-icon {
+    font-size: 16px;
+}
+
+
+
+
+/* ================= HERO SLIDER ================= */
+
+.hero-slider {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* SLIDES CONTAINER */
+.slides {
+    display: flex;
+
+    height: 100%;
+}
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* SLIDES WRAPPER */
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.2s ease-in-out;
+}
+
+/* EACH SLIDE */
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.slide {
+    filter: brightness(1.05) contrast(1.08);
+}
+
+
+/* OVERLAY */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(255,255,255,0.15),
+        rgba(255,255,255,0.35)
+    );
+    z-index: 1;
+}
+
+
+
+
+
+/* KEEP CONTENT ABOVE SLIDES */
+/* ================= DEPARTMENT CARDS ================= */
+
+.department-wrapper {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+}
+
+.department-cards {
+    display: flex;
+    gap: 25px;
+}
+
+/* CARD */
+.dept-card {
+    width: 320px;
+    padding: 35px 30px;
+    border-radius: 12px;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* CARD COLORS */
+.dept-card.light {
+    background: #dff3ea;
+}
+
+.dept-card.mid {
+    background: #bfe7d3;
+}
+
+.dept-card.dark {
+    background: #7ccfb3;
+    color: white;
+}
+
+/* TITLE */
+.dept-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.dept-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* READ MORE BUTTON */
+.read-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 30px;
+    background: white;
+    color: #27ae60;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #27ae60;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for ALL cards */
+.read-btn:hover {
+    background: #27ae60;
+    color: white;
+}
+
+/* DARK CARD BUTTON */
+.dept-card.dark .read-btn {
+    background: #27ae60;
+    color: white;
+}
+
+/* HOVER EFFECT */
+.dept-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+}
+
+.read-btn:hover {
+    background: #27ae60;
+    color: white;
+}
+
+.chat-btn,
+.book-btn {
+    position: absolute;
+    z-index: 2;
+}
+
+
+.light { background: rgba(46,204,113,0.6); }
+.mid   { background: rgba(39,174,96,0.8); }
+.dark  { background: rgba(22,160,133,0.9); }
+
+.chat-btn, .book-btn {
+    position: fixed;
+    bottom: 20px;
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+}
+
+.chat-btn { left: 20px; background: #0b7a4a; }
+.book-btn { right: 20px; background: #f39c12; }
+/* ================= APPOINTMENT SECTION ================= */
+
+.appointment-section {
+    background: linear-gradient(
+        135deg,
+        #1fa67a,
+        #27ae60
+    );
+    padding: 80px 20px;
+}
+
+.appointment-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* TEXT SIDE */
+.appointment-text h2 {
+    color: #ffffff;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.appointment-text p {
+    color: #e9fff5;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 550px;
+}
+
+/* BUTTON SIDE */
+.appointment-btn {
+    display: inline-block;
+    padding: 16px 40px;
+    border-radius: 50px;
+    background: white;
+    color: #27ae60;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    transition: all 0.35s ease;
+}
+
+/* HOVER EFFECT */
+.appointment-btn:hover {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+    .appointment-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .appointment-text p {
+        max-width: 100%;
+    }
+}
+
+/* ================= TAKING CARE OF YOUR HEALTH ================= */
+
+.features {
+    padding: 90px 60px;
+    text-align: center;
+    background: #fff;
+}
+
+.features h2 {
+    font-size: 38px;
+    color: #27ae60;
+    margin-bottom: 70px;
+    font-weight: 500;
+}
+
+/* GRID CENTER FIX */
+/* ================= FEATURES SECTION ================= */
+.feature-slider {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.feature-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: slideFeatures 30s linear infinite;
+}
+
+/* PAUSE ON HOVER */
+.feature-slider:hover .feature-track {
+    animation-play-state: paused;
+}
+.features {
+    background: #f4fbf8;   /* SAME AS BODY */
+    padding: 90px 20px;
+    text-align: center;
+}
+
+
+/* HEADING */
+.features h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+/* HEADING UNDERLINE */
+.features h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #27ae60;
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+/* GRID */
+.feature-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+/* CARD */
+.feature {
+    min-width: 300px;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+.features::before {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #27ae60;
+    display: block;
+    margin: 0 auto 40px;
+    border-radius: 10px;
+}
+
+
+/* CARD HOVER */
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+/* ICON */
+.icon {
+    width: 80px;
+    height: 80px;
+    background: #27ae60;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    transition: transform 0.4s ease;
+}
+
+/* ICON HOVER */
+.feature:hover .icon {
+    transform: rotate(8deg) scale(1.1);
+}
+
+/* TITLE */
+.feature h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.feature p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* READ MORE BUTTON */
+.feature-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 30px;
+    background: transparent;
+    color: #27ae60;
+    border: 2px solid #27ae60;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.feature-btn:hover {
+    background: #27ae60;
+    color: white;
+    transform: translateY(-3px);
+}
+
+@keyframes slideFeatures {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    .feature {
+        min-width: 260px;
+    }
+}
+/* ================= NEWSLETTER SECTION ================= */
+/* ================= NEWSLETTER SECTION ================= */
+
+.newsletter {
+    background: #f4fbf8; /* same as body */
+    padding: 90px 20px;
+}
+
+.newsletter-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px;
+    background: #ffffff;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+/* TEXT */
+.newsletter-text h2 {
+    font-size: 30px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.newsletter-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+    max-width: 420px;
+}
+
+/* FORM */
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+}
+
+.newsletter-form input {
+    padding: 15px 20px;
+    width: 300px;
+    border-radius: 50px;
+    border: 2px solid #d9efe4;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* INPUT FOCUS */
+.newsletter-form input:focus {
+    border-color: #27ae60;
+    box-shadow: 0 0 0 4px rgba(39,174,96,0.15);
+}
+
+/* BUTTON */
+.newsletter-form button {
+    padding: 15px 36px;
+    border-radius: 50px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 12px 30px rgba(39,174,96,0.35);
+}
+
+/* BUTTON HOVER */
+.newsletter-form button:hover {
+    background: #1e8449;
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(39,174,96,0.45);
+}
+
+
+@media (max-width: 768px) {
+    .newsletter-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newsletter-text p {
+        max-width: 100%;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+}
+.site-footer {
+    background: #74cfa8;
+    padding: 25px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-center {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-right a {
+    color: #ffffff;
+    margin-left: 15px;
+    font-size: 16px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: #2b7a5e;
+    transform: scale(1.2);
+}

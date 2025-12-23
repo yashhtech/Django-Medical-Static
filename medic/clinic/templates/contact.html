@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- PAGE HEADER -->
+<section class="contact-hero">
+    <div class="contact-hero-overlay">
+        <h1>Contact Us</h1>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+
+    <div class="contact-wrapper">
+
+        <!-- MAP -->
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29333.2386139435!2d77.48185823955076!3d23.2192467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c412ff20e1acb%3A0xdaa7a1b2f756566a!2sHEALTH%20ZONE%20CLINIC!5e0!3m2!1sen!2sin!4v1766470853710!5m2!1sen!2sin"
+             allowfullscreen="" 
+             loading="lazy">
+             </iframe>"
+
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="contact-form">
+
+            <h2>Our Location</h2>
+
+            <p>
+                500 Terry Francine Street<br>
+                San Francisco, CA 94158
+            </p>
+
+            <p>
+                Tel: 123-456-7890<br>
+                Fax: 123-456-7890<br>
+                info@mysite.com
+            </p>
+
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="form-row">
+                    <div>
+                        <label>First name *</label>
+                        <input type="text" required>
+                    </div>
+                    <div>
+                        <label>Last name *</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+
+                <label>Email *</label>
+                <input type="email" required>
+
+                <label>Subject</label>
+                <input type="text">
+
+                <label>Message</label>
+                <textarea rows="5"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
