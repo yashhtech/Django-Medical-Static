@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cardiology{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/cardiology.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO STRIP -->
+<section class="dept-hero">
+    <div class="dept-hero-inner">
+        <h1>Cardiology</h1>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="dept-section">
+    <div class="dept-container">
+
+        <!-- IMAGE -->
+        <div class="dept-image">
+            <img src="{% static 'images/card.jpg' %}" alt="Cardiology">
+        </div>
+
+        <!-- TEXT -->
+        <div class="dept-text">
+            <h2>The best care</h2>
+
+            <p>
+                I'm a paragraph. Click here to add your own text and edit me.
+                It's easy. Just click “Edit Text” or double click me to add
+                your own content and make changes to the font.
+            </p>
+
+            <p>
+                This is a great space to write long text about your company
+                and your services. Talk about your team and what services
+                you provide.
+            </p>
+
+            <div class="dept-actions">
+                <a href="#" class="btn-appointment">Book an Appointment</a>
+                <span class="schedule-text">
+                    Schedule online. It's easy, fast and secure.
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

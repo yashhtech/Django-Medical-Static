@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Neurology{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/cardiology.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="dept-hero">
+    <div class="dept-hero-inner">
+        <h1>Neurology</h1>
+    </div>
+</section>
+
+<!-- CONTENT -->
+<section class="dept-section">
+    <div class="dept-container">
+
+        <div class="dept-image">
+            <img src="{% static 'images/neuro.jpg' %}" alt="Neurology">
+        </div>
+
+        <div class="dept-text">
+            <h2>The best care</h2>
+
+            <p>
+                I'm a paragraph. Click here to add your own text and edit me.
+                It's easy. Just click “Edit Text” or double click me to add
+                your own content and make changes to the font.
+            </p>
+
+            <p>
+                This is a great space to write long text about your services,
+                your doctors, and patient care.
+            </p>
+
+            <div class="dept-actions">
+                <a href="#" class="btn-appointment">Book an Appointment</a>
+                <span class="schedule-text">
+                    Schedule online. It's easy, fast and secure.
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -23,7 +23,10 @@ urlpatterns = [
     path('', home, name='home'),
     path('contact/', contact, name='contact'),
     path("about/", about, name="about"),
-     path('departments/', departments, name='departments'),
-     path('insurance/', insurance, name='insurance'),
+    path('departments/', departments, name='departments'),
+    path('insurance/', insurance, name='insurance'),
+    path('cardiology',cardiology,name='cardiology'),
+    path('neurology',neurology,name='neurology'),
+    path('orthopaedics',orthopaedics,name='orthopaedics')
 
 ]
